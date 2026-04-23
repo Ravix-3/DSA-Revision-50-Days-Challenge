@@ -1,25 +1,21 @@
 #include<iostream>
 using namespace std;
 
-int count = 0;
-void print_name(string name){
-  // base case
-    if(count == 5){
-        return;
-    }
-  //  Recursive case
-   else{
-    cout << name << endl;
-    count++;
-    print_name(name);
-   }
+void print_name(int n ,string name){
+  if(n<=0)
+   return;
+    cout << name << "\n";
+    print_name(n-1,name);
 }
 
 int main(){
+  int n ;
   string name;
+  cout << "Enter a number:";
+  cin >> n;
   cout<<"Enter your name:";
   cin>>name;
-  print_name(name);
+  print_name(n,name);
   return 0;
 
 }
