@@ -1,8 +1,8 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void print_subsequence(int ind , vector<int> ds, int arr[],int n){
-  if(ind >= n){
+void print_subsequence(int ind , vector<int> &ds, int arr[],int n){
+  if(ind == n){
     if(ds.size()==0){
       cout << "{}";
     }
